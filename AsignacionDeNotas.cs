@@ -26,7 +26,7 @@ namespace SistemaNotas
 
         private void AsignacionDeNotas_Load(object sender, EventArgs e)
         {
-            lblGrado.Text = $"Ingrese grado";
+            lblGrado.Text = "Ingrese grado";
             lblAlumno.Text = "Seleccionar alumno:";
             lblNota.Text = "Ingrese la nota correspondiente:";
             btnAsignarNota.Text = "Asignar Nota";
@@ -59,6 +59,7 @@ namespace SistemaNotas
 
             string gradoSeleccionado = cmbGrado.SelectedItem.ToString();
             string seccionSeleccionada = cmbSeccion.SelectedItem.ToString();
+
             int gradoIndex = Array.IndexOf(InfoEstudiantes.Grados, gradoSeleccionado);
             int seccionIndex = Array.IndexOf(InfoEstudiantes.Secciones, seccionSeleccionada);
 

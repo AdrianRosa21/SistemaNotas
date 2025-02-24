@@ -58,7 +58,7 @@ namespace SistemaNotas
             btnlimpiar.Text = "Limpiar campos";
             btnIrANotas.Text = "Ir a ingresar notas";
             cmbGrado.Text = "Seleccione el grado del estudiante";
-            txtEstudiantes.Text = "Ingrese nombre del estudiante";
+            txtEstudiantes.PlaceholderText = "Ingrese nombre del estudiante";
             cmbSeccion.Text = "Seleccione la sección";
             lblSeccion.Text = "Selecciona la sección del estudiante";
         }
@@ -78,12 +78,12 @@ namespace SistemaNotas
 
             for (int i = 0; i < InfoEstudiantes.Estudiantes.GetLength(2); i++)
             {
-                if (InfoEstudiantes.Estudiantes[gradoIndex, seccionIndex, i] == null)
+                if (InfoEstudiantes.Estudiantes[seccionIndex,gradoIndex , i] == null)
                 {
-                    InfoEstudiantes.Estudiantes[gradoIndex, seccionIndex, i] = alumno;
+                    InfoEstudiantes.Estudiantes[seccionIndex, gradoIndex, i] = alumno;
                     alumnos.Add($"{InfoEstudiantes.Grados[gradoIndex]} - " +
                                 $"{InfoEstudiantes.Secciones[seccionIndex]}: " +
-                                $"{InfoEstudiantes.Estudiantes[gradoIndex, seccionIndex, i]}");
+                                $"{InfoEstudiantes.Estudiantes[seccionIndex, gradoIndex, i]}");
                     lbAlumnos.Items.Add($"{InfoEstudiantes.Grados[gradoIndex]} - " +
                                          $"{InfoEstudiantes.Secciones[seccionIndex]}: {alumno}");
                     MessageBox.Show($"Estudiantes agregados:\n{string.Join("\n", alumnos)}",

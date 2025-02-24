@@ -21,7 +21,7 @@ namespace SistemaNotas
             checkcontra.Text = "Ver contraseña";
             txtContra.PasswordChar = '*';
 
-            logo.Image = Image.FromFile("C:\\Users\\adrian.rosa\\source\\repos\\SistemaNotas\\img\\arrupe.png");
+            logo.Image = Image.FromFile("C:\\Users\\dell.ARRUPE\\Source\\Repos\\SistemaNotas\\img\\arrupe.png");
         }
 
         private void checkcontra_CheckStateChanged(object sender, EventArgs e)
